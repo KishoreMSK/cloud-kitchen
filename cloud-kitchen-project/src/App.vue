@@ -1,32 +1,19 @@
 <template>
-  <div id="app">
+  <v-app>
     
-   
-    <router-view/>
-  </div>
+    <v-main>
+      <HeaderComponent/>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-
+import HeaderComponent from "./components/HeaderComponent.vue"
 export default {
   name: 'App',
-  mounted()
-  {
-     this.$store.dispatch("GETITEM_LIST")
-  },
-  components: {
-   
+  components:{
+    HeaderComponent
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
