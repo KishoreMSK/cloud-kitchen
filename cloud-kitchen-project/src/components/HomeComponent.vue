@@ -1,5 +1,5 @@
 <template>
-      <h1>jwe</h1>
+      <h1>content changed</h1>
 </template>
 <script src="../js/home.js">
 
