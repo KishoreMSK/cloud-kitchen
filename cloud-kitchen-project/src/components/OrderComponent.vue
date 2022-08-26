@@ -4,4 +4,4 @@
 </div>
 </template>
 
-<script src="../js/orderComponent.js"/>
+<script src="../js/orderComponent"/>
