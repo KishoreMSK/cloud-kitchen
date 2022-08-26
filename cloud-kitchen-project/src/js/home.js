@@ -1,3 +1,7 @@
+import  UserHeaderComponent from "../components/UserHeaderComponent"
 export default {
-    name:"HomeComponent"
+    name:"HomeComponent",
+    components:{
+        UserHeaderComponent
+    }
 }

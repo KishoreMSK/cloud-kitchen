@@ -1,8 +1,9 @@
+
 <template>
 
-   <div>
-        <h1>hommj e</h1>
-   </div>
+      <UserHeaderComponent/>
+    
+ 
 </template>
 <script src="../js/home.js">
 
