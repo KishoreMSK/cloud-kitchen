@@ -1,5 +1,8 @@
 <template>
-      <h1>content changed</h1>
+
+   <div>
+        <h1>home</h1>
+   </div>
 </template>
 <script src="../js/home.js">
 
