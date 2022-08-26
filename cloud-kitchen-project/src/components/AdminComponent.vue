@@ -1,19 +1,9 @@
 <template>
- <v-app>
-   <HeaderComponent/>
-    <v-main>
-     
-    </v-main>
-  </v-app>
+<div> 
+    <HeaderComponent/>
+    <router-view />
+    
+</div>
 </template>
-<script>
-import HeaderComponent from './HeaderComponent.vue';
-
-export default {
-    name: "App",
-    data: () => ({
-    //
-    }),
-    components: { HeaderComponent }
-};
-</script>
+<script src="../js/adminComponent.js"/>
+   
