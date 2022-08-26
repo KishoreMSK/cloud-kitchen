@@ -1,20 +1,18 @@
- import HeaderComponent  from '../components/HeaderComponent.vue'
  export default {
     data () {
       return {
         search: '',
         headers: [
           {
-            text: 'Dessert (100g serving)',
+            text: 'Customer_name',
             align: 'start',
             sortable: false,
             value: 'name',
           },
-          { text: 'Calories', value: 'calories' },
-          { text: 'Fat (g)', value: 'fat' },
-          { text: 'Carbs (g)', value: 'carbs' },
-          { text: 'Protein (g)', value: 'protein' },
-          { text: 'Iron (%)', value: 'iron' },
+          { text: 'Phone_number', value: 'calories' },
+          { text: 'Address', value: 'fat' },
+          { text: 'Products_added', value: 'carbs' },
+          { text: 'Total_price', value: 'protein' },
         ],
         desserts: [
           {
@@ -101,6 +99,6 @@
       }
     },
     components: { 
-        HeaderComponent 
+        
     }
   }
