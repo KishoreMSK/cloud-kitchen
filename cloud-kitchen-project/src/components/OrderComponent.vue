@@ -2,7 +2,7 @@
 <v-container class="order">
    
     <v-card-title>
-      Nutrition
+      Order Details
       <v-spacer></v-spacer>
       <v-text-field
         v-model="search"
@@ -27,5 +27,8 @@
     box-shadow: 1px 3px 9px 10px rgba(209, 201, 209, 0.82);
 }
 
+
 </style>
+
 <script src="../js/orderComponent.js"/>
+

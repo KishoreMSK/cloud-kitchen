@@ -2,7 +2,7 @@
   <div>
     <v-app-bar
       color="deep-purple accent-4"
-      dense
+     
       dark
     >
     

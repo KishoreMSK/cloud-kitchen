@@ -1,6 +1,24 @@
 export default {
     state : {
-        itemlist : []
+        itemlist : [{
+            name:'briyani',
+            price:123,
+            id:1
+        },{
+            name:'idly',
+            price:123,
+            id:1
+        },{
+            name:'dhosa',
+            price:123,
+            id:1
+        },
+        {
+            name:'owo',
+            price:123,
+            id:1
+        }
+    ]
     },
     getters :{
         getitemlist(state){
@@ -15,6 +33,7 @@ export default {
     },
     actions : {
         GETITEM_LIST(){
+            
            console.log("WORKIng")
         }
     }
