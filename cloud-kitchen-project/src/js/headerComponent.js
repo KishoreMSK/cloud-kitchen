@@ -3,10 +3,19 @@ export default {
         return {
           drawer: null,
           items: [
-            { title: 'Orders', icon: 'mdi-view-dashboard' },
+            { title: 'Order', icon: 'mdi-view-dashboard' },
             { title: 'Inventory', icon: 'mdi-forum' },
           ],
         }
       },
-    name:"HeaderComponent"
+      methods:{
+          changePage(title){
+            console.log(title);
+            this.$router.push({path : `/admin/${title}`})
+          }
+      },
+      Component:{
+        name:"HeaderComponent"
+      }
+    
 }

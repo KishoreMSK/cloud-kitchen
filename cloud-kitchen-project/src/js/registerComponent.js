@@ -17,7 +17,6 @@
       methods:{
         register()
         {
-         
           var payload={
             "userName":this.user.username,
             "phoneNo":this.user.mobno,
@@ -29,7 +28,7 @@
           console.log(payload)
           registerUser({
             success : (response) => {
-              
+              this.$router.push({path : `/login`})
               console.log(response)
                 alert('success')
             },
@@ -39,7 +38,10 @@
             },
             object:payload
         })
-
+        
+        },
+        goLogin(){
+            this.$router.push({path : `/login`})
         }
       }
     

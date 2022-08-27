@@ -4,7 +4,7 @@
     class="mx-auto"
     max-width="500"
   >
-  <v-container class="card register-card">
+  <v-container class="register-card">
     <v-card-title>
      Register
   </v-card-title>
@@ -73,11 +73,29 @@
     </v-row>
   </v-container>
 
-   
-     <v-btn
-  color="primary"
- @click="register"
-> Register</v-btn>
+<div class="reg-button">
+     <v-row cols="12">
+        <v-col lg="6" md="12" sm="12">
+        <v-btn @click="register()"
+         color="primary"
+   block
+  elevation="2"
+  raised
+  rounded
+>Register</v-btn>
+</v-col>
+ <v-col lg="6" md="12" sm="12">
+        <v-btn @click="goLogin()"
+         color="primary"
+   block
+  elevation="2"
+  raised
+  rounded
+>Login</v-btn>
+</v-col>
+     </v-row>
+     
+</div>
      
    
     </v-container>
@@ -85,12 +103,13 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 .register-card{
- margin-top:10%;
+ margin-top:15%;
 }
  .mx-auto{
     margin-left: 300px;
+    border-radius: 30px;
  }
  .buttons{
     margin-left:5rem;
@@ -98,6 +117,11 @@
  .change{
     background-color:whitesmoke;
     height: 100vh;
+    border-radius: 30px;
+ }
+ .reg-button{
+     margin-left: 30px;
+     margin-right: 30px;
  }
 </style>
 
