@@ -1,3 +1,4 @@
+
 export default {
     data () {
       return {
@@ -15,6 +16,8 @@ export default {
           { text: 'Total_price', value: 'protein' },
         ],
         desserts: [
+
+
           {
             name: 'Frozen Yogurt',
             calories: 159,

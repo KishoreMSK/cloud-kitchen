@@ -2,12 +2,12 @@
   <div>
     <v-app-bar
       color="deep-purple accent-4"
-     
+      dense
       dark
     >
-    
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Swiggy</v-toolbar-title>
+      <v-toolbar-title>Page title</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -46,3 +46,5 @@
     </v-app-bar>
   </div>
 </template>
+<script src="../js/UserHeader.js">
+</script>

@@ -1,4 +1,5 @@
 <template>
+
 <v-container class="order">
    
     <v-card-title>
@@ -19,6 +20,7 @@
     ></v-data-table>
   
 </v-container>
+
 </template>
 
 <style>

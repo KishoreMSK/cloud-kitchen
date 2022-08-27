@@ -1,4 +1,4 @@
-import  UserHeaderComponent from "../components/UserHeaderComponent"
+import  UserHeaderComponent from "../components/UserHeaderComponent.vue"
 export default {
     name:"HomeComponent",
     components:{

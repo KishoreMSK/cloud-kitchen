@@ -5,8 +5,12 @@ import OrderComponent from '../components/OrderComponent.vue';
 import AdminComponent from '../components/AdminComponent.vue';
 import InventoryComponent from '../components/InventoryComponent.vue';
 import ProductComponent from'../components/ProductComponent';
+
 import RegisterComponent from '../components/RegisterComponent'
 import LoginComponent from '../components/LoginComponent'
+
+import ProductDescriptionComponent from '../components/ProductDescriptionComponent.vue'
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -31,6 +35,18 @@ children:[
   component: ProductComponent
 
  },
+
+ {
+    path:":id",
+    component: ProductDescriptionComponent
+  
+   },
+ {
+  path:"inventory",
+  component:InventoryComponent
+
+ },
+
 ]},
 {
   path:"/register",
