@@ -28,6 +28,13 @@
     >
     </v-text-field>
     </v-col>
+    <v-col>
+      <v-select
+    :items="['admin', 'customer']"
+       v-model="user.userType"
+    label="userType"
+  ></v-select>
+      </v-col>
     </v-row><br>
     <div class="loginBtn">
      <v-row cols="12">

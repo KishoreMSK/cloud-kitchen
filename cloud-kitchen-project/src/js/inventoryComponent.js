@@ -1,5 +1,5 @@
 import AddProductComponent from "../components/AddProductComponent.vue"
-import {createProduct} from "../service/product.service"
+import {createProduct,getProduct} from "../service/product.service"
 export default {
     data () {
       return {
@@ -126,6 +126,21 @@ export default {
           },
         ],
       }
+    },
+    beforeCreate()
+    {
+      getProduct({
+        success : (response) => {
+          this.headers=response.data
+          console.log(response.data)
+            alert('success')
+        },
+        error : (e) => {
+          console.log(e)
+           alert("error")
+        },
+    })
+
     },
     methods:{
       saveInventory()

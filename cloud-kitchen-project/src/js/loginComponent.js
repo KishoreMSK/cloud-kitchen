@@ -5,17 +5,20 @@ export default{
        return{
          user:{
             uname:"",
-            upassword:""
+            upassword:"",
+            userType:""
          }
        }
     },
     methods:{
         userLogin(){
+           
             var payload={
-                userName : this.uname,
-                loginPassword : this.password,
-                userType : "customer"
+                userId : this.user.uname,
+                loginPassword : this.user.upassword,
+                userType : this.user.userType
             }
+            console.log(payload)
             loginUser({
                 success : (response) => {
                   

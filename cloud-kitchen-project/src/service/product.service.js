@@ -11,3 +11,15 @@ export const createProduct = ({success, error,object})=>{
       error && error(e)
   })
 }
+export const getProduct = ({success, error})=>{
+    console.log("inside get rhisteer")
+    const api ="http://10.30.1.87:8888/admin/getAll" 
+  
+    axios
+    .get(api)
+    .then((response)=>{     
+      success && success(response)      
+    }).catch((e) => {
+        error && error(e)
+    })
+  }
