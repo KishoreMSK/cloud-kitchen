@@ -1,8 +1,33 @@
-
+import AddProductComponent from "../components/AddProductComponent.vue"
+import {createProduct} from "../service/product.service"
 export default {
     data () {
       return {
+        product:{
+            foodName:"",
+            category:"",
+            itemType:"",
+            price:"",
+            cuisine:"",
+            rating:"",
+            duration:"",
+            offer:"",
+            coupon:"",
+            stockCount:null,
+            description:"",
+            image:""
+        },
         search: '',
+        name:"InventoryComponent",
+        dialog:false,
+        components:{
+          AddProductComponent
+          
+        },
+         rules: [
+                value => !!value || 'Required.',
+                value => (value && value.length >= 3) || 'Min 3 characters',
+              ],
         headers: [
           {
             text: 'Customer_name',
@@ -14,6 +39,7 @@ export default {
           { text: 'Address', value: 'fat' },
           { text: 'Products_added', value: 'carbs' },
           { text: 'Total_price', value: 'protein' },
+          { text: 'Availablity', value: 'availablity' },
         ],
         desserts: [
 
@@ -99,6 +125,25 @@ export default {
             iron: '6%',
           },
         ],
+      }
+    },
+    methods:{
+      saveInventory()
+      {
+        
+         console.log(this.product)
+         createProduct({
+          success : (response) => {
+            
+            console.log(response)
+              alert('success')
+          },
+          error : (e) => {
+            console.log(e)
+             alert("error")
+          },
+          object:this.product
+      })
       }
     },
     components: { 
