@@ -1,9 +1,10 @@
 <template>
 <div> 
     <HeaderComponent/>
-    <router-view />
-    
-</div>
-</template>
+       
+  </div>
+ </template>
+  
+
 <script src="../js/adminComponent.js"/>
    

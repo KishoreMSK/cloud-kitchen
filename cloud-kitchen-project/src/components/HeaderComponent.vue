@@ -5,9 +5,9 @@
       dense
       dark
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Page title</v-toolbar-title>
+      <v-toolbar-title>Cloud-Kitchen</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -43,6 +43,63 @@
           </v-list-item>
         </v-list>
       </v-menu>
+     
     </v-app-bar>
+      <v-sheet
+    height="770"
+    class="overflow-hidden"
+    style="position: relative;"
+  >
+    <!-- <v-container class="fill-height">
+      <v-row
+        align="center"
+        justify="center"
+      > -->
+       <div class="">
+          <router-view />
+       </div>
+        
+      <!-- </v-row>
+    </v-container> -->
+
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list-item>
+        <v-list-item-avatar>
+          <v-img src="https://t4.ftcdn.net/jpg/04/75/00/99/360_F_475009987_zwsk4c77x3cTpcI3W1C1LU4pOSyPKaqi.jpg"></v-img>
+        </v-list-item-avatar>
+
+        <v-list-item-content>
+          <v-list-item-title>Admin</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list dense>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </v-sheet>
+
   </div>
 </template>
+<script src="../js/headerComponent.js">
+
+
+</script>
