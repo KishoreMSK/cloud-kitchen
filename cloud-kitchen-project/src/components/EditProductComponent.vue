@@ -1,6 +1,50 @@
-import EditProductComponent from "../components/EditProductComponent.vue"
+<template>
+  <v-container class="order">
+   <v-btn absolute right  style="margin-right:10%;margin-top:3%;margin-bottom:2%" @click="dialog=true" color="primary">
+    Add product
+   </v-btn>
+    <v-card-title class="inventory-top">
+      Inventory Details
+      <v-spacer></v-spacer>
+      <v-text-field
+        v-model="search"
+        append-icon="mdi-magnify"
+        label="Search"
+        single-line
+        hide-details
+      ></v-text-field>
+    </v-card-title>
+    <v-data-table
+      :headers="headers"
+      :items="products"
+      :search="search"
+    >
+   
+<!-- <template v-slot:[`item.Availablity`]="{ item }">
+  <v-btn v-if
+</template> -->
+<template v-slot:[`item.Actions`]="{ item }">
+         <v-icon
+        small
+        @click="dialog2=true"
+      >
+        mdi-pencil
+      </v-icon>
+      <v-icon
+        small
+        @click="deleteItem(item)"
+      >
+        mdi-delete
+      </v-icon>
+    </template>
+    </v-data-table>
+  
+</v-container>
+</template>
+<script>
 import {createProduct,getProduct,deleteProduct} from "../service/product.service"
 export default {
+    name:"EditProductComponent",
     data () {
       return {
         product:{
@@ -21,10 +65,7 @@ export default {
         name:"InventoryComponent",
         dialog:false,
         dialog2:false,
-        components:{
-          EditProductComponent
-          
-        },
+       
          rules: [
                 value => !!value || 'Required.',
                 value => (value && value.length >= 3) || 'Min 3 characters',
@@ -107,3 +148,4 @@ export default {
         
     }
   }
+</script>
