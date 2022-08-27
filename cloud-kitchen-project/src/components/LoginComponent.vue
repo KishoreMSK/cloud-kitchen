@@ -31,14 +31,26 @@
     </v-row><br>
     <div class="loginBtn">
      <v-row cols="12">
-        <v-btn @click="loginUser()"
+        <v-col lg="6" md="12" sm="12">
+        <v-btn @click="userLogin()"
          color="primary"
    block
   elevation="2"
   raised
   rounded
 > Login</v-btn>
+</v-col>
+ <v-col lg="6" md="12" sm="12">
+        <v-btn @click="userReset()"
+         color="primary"
+   block
+  elevation="2"
+  raised
+  rounded
+>Reset</v-btn>
+</v-col>
      </v-row>
+     
 </div>
       
     </v-container>
@@ -46,21 +58,21 @@
 </div>
 </template>
 
-<style>
+<style scoped>
   .loginBtn{
     width: 20vw;
     margin-left: 80px;
   }
   .card{
     height: 250px;
-    margin-top: 20px;
+    margin-top: 25%;
   }
   .loginchange{
     background-color: rgb(149, 144, 144);
     height: 100vh;
   }
   .mx-auto{
-    border-radius: 200px;
+    border-radius: 20px;
   }
 </style>
 

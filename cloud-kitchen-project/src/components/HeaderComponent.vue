@@ -81,7 +81,7 @@
 
       <v-list dense>
         <v-list-item
-          v-for="item in items"
+          v-for="item in items" @click = "changePage(item.title)"
           :key="item.title"
           link
         >
@@ -92,6 +92,7 @@
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
+         
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
