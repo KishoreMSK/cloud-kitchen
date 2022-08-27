@@ -1,5 +1,5 @@
 import AddProductComponent from "../components/AddProductComponent.vue"
-import {createProduct,getProduct} from "../service/product.service"
+import {createProduct,getProduct,deleteProduct} from "../service/product.service"
 export default {
     data () {
       return {
@@ -41,7 +41,7 @@ export default {
           { text: 'offer', value: 'offer' },
           { text: 'coupon', value: 'coupon' },
           { text: 'url', value: 'url' },
-          { text: 'Availablity', value: 'stockCount' },
+          { text: 'Availablity', value: 'Availablity' },
           { text: 'Actions', value: 'Actions' },
         ],
      products:[],
@@ -66,6 +66,22 @@ export default {
           },
       })
   
+      },
+      deleteItem(item)
+      {
+        deleteProduct({
+          success : (response) => {
+            
+            console.log(response)
+              this.getProductsList()
+          },
+          error : (e) => {
+            console.log(e)
+             alert("error")
+          },
+          object:item.foodId
+      })
+
       },
       saveInventory()
       {

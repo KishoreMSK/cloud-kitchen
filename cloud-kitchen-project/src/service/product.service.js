@@ -23,3 +23,15 @@ export const getProduct = ({success, error})=>{
         error && error(e)
     })
   }
+  export const deleteProduct = ({success, error,object})=>{
+    console.log("inside get rhisteer")
+    const api =`http://10.30.1.87:8888/admin/deleteById/?id=${object}`
+    console.log(api)
+    axios
+    .delete(api)
+    .then((response)=>{     
+      success && success(response)      
+    }).catch((e) => {
+        error && error(e)
+    })
+  }
