@@ -17,7 +17,7 @@
     </v-card-title>
     <v-data-table
       :headers="headers"
-      :items="desserts"
+      :items="products"
       :search="search"
     ></v-data-table>
   
