@@ -42,6 +42,7 @@ export default {
           { text: 'coupon', value: 'coupon' },
           { text: 'url', value: 'url' },
           { text: 'Availablity', value: 'stockCount' },
+          { text: 'Actions', value: 'Actions' },
         ],
      products:[],
       }
