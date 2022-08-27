@@ -1,5 +1,5 @@
 export default {
-    name:"UserHeader",
+    name:"UserHeaderComponent",
     data: () => ({
       drawer: false,
       group: null,

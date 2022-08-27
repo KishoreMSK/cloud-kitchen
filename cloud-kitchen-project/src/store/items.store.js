@@ -1,22 +1,72 @@
 export default {
     state : {
+        itemFilteredList:[],
         itemlist : [{
-            name:'briyani',
+            itemname:'chicken briyani',
             price:123,
+            category:"non-vegetarian",
+            itemtype :"briyani",
+            cuisine:"indian",
+            description:"Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.",
+            rating:4,
+            duration:"38 mins",
+            offer:"50",
+            coupon:"WELCOME50",
+            stockcount:0,
             id:1
         },{
-            name:'idly',
+            itemname:'mutton idly',
             price:123,
-            id:1
+            category:"non-vegetarian",
+            itemtype :"idly",
+            cuisine:"indian",
+            description:"Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.",
+            rating:4,
+            duration:"38 mins",
+            offer:"50",
+            coupon:"WELCOME50",
+            stockcount:0,
+            id:2
         },{
-            name:'dhosa',
+            itemname:'prwan briyani',
             price:123,
-            id:1
+            category:"non-vegetarian",
+            itemtype :"briyani",
+            cuisine:"indian",
+            description:"Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.",
+            rating:4,
+            duration:"38 mins",
+            offer:"50",
+            coupon:"WELCOME50",
+            stockcount:0,
+            id:3
         },
         {
-            name:'owo',
+            itemname:'mushroom briyani',
             price:123,
-            id:1
+            type:"vegetarian",
+        itemtype :"briyani",
+        category:"indian",
+            description:"Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.",
+            rating:4,
+            duration:"38 mins",
+            offer:"50",
+            coupon:"WELCOME50",
+            id:6
+        },
+        {
+            itemname:'vegetable briyani',
+            price:123,
+            category:"vegetarian",
+            itemtype :"briyani",
+            cuisine:"indian",
+            description:"Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.",
+            rating:4,
+            duration:"38 mins",
+            offer:"50",
+            coupon:"WELCOME50",
+            stockcount:0,
+            id:4
         }
     ]
     },
@@ -24,17 +74,35 @@ export default {
         getitemlist(state){
             console.log("in get item",state)
             return state.itemlist;
+        },
+        
+        getitemfilteredlist(state){
+            return state.itemFilteredList;
         }
     },
     mutations : {
-        setitemlist(state,value){
-            state.itemlist = value
-        }
+        setitemFilteredList(state,value){
+            const filteredArray = state.itemlist.filter((item) => {
+                
+                return item.itemtype==value;
+              });
+              console.log(filteredArray)
+            state.itemFilteredList = filteredArray
+        },
+        
     },
     actions : {
         GETITEM_LIST(){
-            
+
            console.log("WORKIng")
-        }
+        },
+        SET_FILTERED_LIST(state,value){
+
+            
+            this.commit("setitemFilteredList",value)
+            
+         },
+
+        
     }
 }
