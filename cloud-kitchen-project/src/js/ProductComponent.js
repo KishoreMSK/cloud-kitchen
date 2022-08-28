@@ -19,6 +19,7 @@ export default {
     },
     mounted()
     {
+        
         this.$store.dispatch("GETITEM_LIST")
     }
 }
