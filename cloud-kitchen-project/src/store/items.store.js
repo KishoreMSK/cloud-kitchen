@@ -88,7 +88,6 @@ export default {
               console.log(filteredArray)
             state.itemFilteredList = filteredArray
         },
-        
     },
     actions : {
         GETITEM_LIST(){

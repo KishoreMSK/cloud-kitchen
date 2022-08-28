@@ -82,11 +82,9 @@ export default {
           },
           object:item.foodId
       })
-
       },
       saveInventory()
-      {
-        
+      { 
          console.log(this.product)
          createProduct({
           success : (response) => {
