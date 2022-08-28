@@ -75,7 +75,17 @@ export default {
             console.log("in get item",state)
             return state.itemlist;
         },
-        
+        getUniqueItemList(state){
+            const key = 'itemType';
+            const array = state.itemlist
+           const arrayUniqueByKey = [...new Map(array.map(item =>
+             [item[key], item])).values()];
+
+            console.log(arrayUniqueByKey);
+            console.log("imnside unique");
+            return arrayUniqueByKey;
+
+        },
         getitemfilteredlist(state){
             return state.itemFilteredList;
         }
@@ -88,19 +98,24 @@ export default {
               console.log(filteredArray)
             state.itemFilteredList = filteredArray
         },
+        setitemProduct(state,response)
+        {
+            console.log("set item product")
+            state.itemlist=response;
+        }
     },
     actions : {
         GETITEM_LIST(){
-            getProduct({
-                success : (response) => {
-                    this.commit("setitemProduct",response)
-                    console.log("inside store get")
-                },
-                error : (e) => {
-                   alert("error")
-                   state.itemlist=[]
-                },
-            })
+            // getProduct({
+            //     success : (response) => {
+            //         this.commit("setitemProduct",response)
+            //         console.log("inside store get")
+            //     },
+            //     error : (e) => {
+            //        alert("error")
+            //        state.itemlist=[]
+            //     },
+            // })
            console.log("WORKIng")
         },
         SET_FILTERED_LIST(state,value){

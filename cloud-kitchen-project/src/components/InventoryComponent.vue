@@ -20,7 +20,6 @@
       :items="products"
       :search="search"
     >
-   
 <!-- <template v-slot:[`item.Availablity`]="{ item }">
   <v-btn v-if
 </template> -->
@@ -138,10 +137,7 @@
           label="Description"
         v-model="product.description"
         ></v-textarea>
-   
     </v-col>
-     
-   
           </v-row>
 
         </v-card-text> 

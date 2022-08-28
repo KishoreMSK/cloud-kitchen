@@ -59,14 +59,13 @@ export default {
         getProduct({
           success : (response) => {
             this.products=response.data
-           
+  
           },
           error : (e) => {
             console.log(e)
             
           },
       })
-  
       },
       deleteItem(item)
       {

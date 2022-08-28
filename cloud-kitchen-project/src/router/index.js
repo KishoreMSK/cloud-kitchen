@@ -7,7 +7,7 @@ import InventoryComponent from '../components/InventoryComponent.vue';
 import ProductComponent from'../components/ProductComponent';
 import RegisterComponent from '../components/RegisterComponent';
 import LoginComponent from '../components/LoginComponent';
-
+import addToCartComponent from '../components/AddToCartComponent';
 import ProductDescriptionComponent from '../components/ProductDescriptionComponent.vue'
 
 Vue.use(VueRouter);
@@ -24,7 +24,6 @@ children:[
  {
   path:"inventory",
   component:InventoryComponent
-
  },
 ]},
 {path:'/user',component:HomeComponent,
@@ -39,11 +38,6 @@ children:[
     component: ProductDescriptionComponent
   
    },
- {
-  path:"inventory",
-  component:InventoryComponent
-
- },
 ]},
 {
   path:"/register",
@@ -52,8 +46,11 @@ children:[
  {
   path:"/login",
   component:LoginComponent
+ },
+ {
+  path:"/cart",
+  component:addToCartComponent
  }
-
   // { path: '/admin', component:AdminComponent },
   // { path: '/admin/order', component: OrderComponent}
  

@@ -3,7 +3,7 @@
    <div>
    
    <v-container>
-    <h5> {{filtereditemList.length}} ITEMS</h5>
+    <h5> {{filtereditemList.length}}ITEMS</h5>
     <v-row>
         <v-col cols="12" lg="8" sm="12" md="12">
             <div v-for="item in  filtereditemList" :key="item.id">
@@ -17,7 +17,7 @@
      class="imgItem"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
-    <div class="addToCart"> <v-btn color="primary" class="button" dense  small >Add to cart</v-btn></div>
+    <div class="addToCart"> <v-btn @click="addCart(item)" color="primary" class="button" dense  small >Add to cart</v-btn></div>
                     </div>
                 </v-sheet>
             </div>

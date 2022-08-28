@@ -1,0 +1,27 @@
+<template>
+<div>
+   <v-container>
+       total items {{cartlist.length}}
+       <v-btn @click="emptyCart">Remove aLL</v-btn>
+       <table>
+            <tr>
+              <td>  Name</td>
+               <td>  Price</td>
+            </tr>
+            <tr v-for="(item,index) in cartlist" :key="item.id">
+                <td> {{item.itemname}}</td>
+                  <td> {{item.price}}</td>
+                  <td ><v-btn @click="removeItem(index)">Delete</v-btn></td>
+            </tr>
+       </table>
+    </v-container>
+</div>
+</template>
+
+<style scoped>
+.cart-body{
+    background: grey;
+}
+</style>
+
+<script src="../js/addToCartComponent.js"></script>

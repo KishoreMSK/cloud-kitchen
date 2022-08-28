@@ -14,7 +14,7 @@ export const createProduct = ({success, error,object})=>{
 export const getProduct = ({success, error})=>{
     console.log("inside get rhisteer")
     const api ="http://10.30.1.87:8888/admin/getAll" 
-  
+
     axios
     .get(api)
     .then((response)=>{     

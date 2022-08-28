@@ -7,10 +7,12 @@
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Page title</v-toolbar-title>
+      <v-toolbar-title>Cloud-Kitchen</v-toolbar-title>
 
-      <v-spacer></v-spacer>
+      <v-btn class="ml-md-14" color="deep-purple accent-4">Products</v-btn>
+      <v-btn class="ml-md-14" color="deep-purple accent-4">Cart</v-btn>
 
+<v-spacer></v-spacer> 
       <v-btn icon>
         <v-icon>mdi-heart</v-icon>
       </v-btn>
@@ -33,7 +35,7 @@
           </v-btn>
         </template>
 
-        <v-list>
+        <!-- <v-list>
           <v-list-item
             v-for="n in 5"
             :key="n"
@@ -41,7 +43,7 @@
           >
             <v-list-item-title>Option {{ n }}</v-list-item-title>
           </v-list-item>
-        </v-list>
+        </v-list> -->
       </v-menu>
     </v-app-bar>
   </div>

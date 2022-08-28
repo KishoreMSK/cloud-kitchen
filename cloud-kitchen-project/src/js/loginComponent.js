@@ -21,13 +21,18 @@ export default{
             console.log(payload)
             loginUser({
                 success : (response) => {
-                  
+                  const val = true
                   console.log(response)
-                    alert('success')   ///if response-true -> this.rputer.push(path:"/user") else alert(this.error = invalid)
+                  if(val){
+                    this.$route.push({path:"/user"})
+                  }
+                  else{
+                    alert('error')   
+                  }
                 },
                 error : (e) => {
                   console.log(e)
-                   alert("error")    //
+                   alert("error")    
                 },
                 object:payload
             })

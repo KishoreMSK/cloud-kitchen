@@ -14,11 +14,19 @@ export default {
     },
     computed:{
         ...mapGetters({
-            itemlist:'getitemlist'
+            itemlist:'getitemlist',
+            uniqueItem : 'getUniqueItemList'
         })
     },
     mounted()
     {
         this.$store.dispatch("GETITEM_LIST")
+        const key = 'itemType';
+        const array = this.itemlist
+       const arrayUniqueByKey = [...new Map(array.map(item =>
+         [item[key], item])).values()];
+
+        console.log(arrayUniqueByKey);
+        console.log("imnside unique");
     }
 }
