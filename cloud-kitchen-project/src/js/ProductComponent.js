@@ -21,6 +21,5 @@ export default {
     {
         
         this.$store.dispatch("GETITEM_LIST")
-
     }
 }

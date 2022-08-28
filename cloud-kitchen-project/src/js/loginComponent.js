@@ -23,11 +23,11 @@ export default{
                 success : (response) => {
                   
                   console.log(response)
-                    alert('success')
+                    alert('success')   ///if response-true -> this.rputer.push(path:"/user") else alert(this.error = invalid)
                 },
                 error : (e) => {
                   console.log(e)
-                   alert("error")
+                   alert("error")    //
                 },
                 object:payload
             })
