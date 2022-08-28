@@ -88,20 +88,24 @@ export default {
               console.log(filteredArray)
             state.itemFilteredList = filteredArray
         },
-        
+        setitemProduct(state,response)
+        {
+            console.log("set item product")
+            state.itemlist=response;
+        }
     },
     actions : {
         GETITEM_LIST(){
-            getProduct({
-                success : (response) => {
-                    this.commit("setitemProduct",response)
-                    console.log("inside store get")
-                },
-                error : (e) => {
-                   alert("error")
-                   state.itemlist=[]
-                },
-            })
+            // getProduct({
+            //     success : (response) => {
+            //         this.commit("setitemProduct",response)
+            //         console.log("inside store get")
+            //     },
+            //     error : (e) => {
+            //        alert("error")
+            //        state.itemlist=[]
+            //     },
+            // })
            console.log("WORKIng")
         },
         SET_FILTERED_LIST(state,value){
