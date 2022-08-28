@@ -1,7 +1,7 @@
 <template>
   <v-container class="order">
    <v-btn absolute right  style="margin-right:10%;margin-top:3%;margin-bottom:2%" @click="dialog=true" color="primary">
-    Add Product
+    Add Inventory
    </v-btn>
     <v-card-title class="inventory-top">
       Inventory Details
