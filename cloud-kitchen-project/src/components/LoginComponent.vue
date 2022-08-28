@@ -8,7 +8,6 @@
     <v-card-title>
      Login
   </v-card-title>
-
     <v-row cols="12">
     <v-col>
     <v-text-field v-model="user.uname" filled rounded solo dense
@@ -38,8 +37,8 @@
   ></v-select>
     </v-col>
     </v-row>
-<v-row cols="12">
-    <div class="loginBtn">
+<div class="">
+     <v-row cols="12">
         <v-col lg="6" md="12" sm="12">
         <v-btn @click="userReset()"
          color="primary"
@@ -47,10 +46,8 @@
   elevation="2"
   raised
   rounded
-> Reset</v-btn>
+>Reset</v-btn>
 </v-col>
-</div>
-<div>
  <v-col lg="6" md="12" sm="12">
         <v-btn @click="userLogin()"
          color="primary"
@@ -60,8 +57,9 @@
   rounded
 >Login</v-btn>
 </v-col>
+     </v-row>
+     
 </div>
-</v-row>
       
     </v-container>
   </v-card>

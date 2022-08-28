@@ -83,13 +83,11 @@ export default {
     mutations : {
         setitemFilteredList(state,value){
             const filteredArray = state.itemlist.filter((item) => {
-                
                 return item.itemtype==value;
               });
               console.log(filteredArray)
             state.itemFilteredList = filteredArray
         },
-        
     },
     actions : {
         GETITEM_LIST(){
@@ -97,12 +95,8 @@ export default {
            console.log("WORKIng")
         },
         SET_FILTERED_LIST(state,value){
-
             
-            this.commit("setitemFilteredList",value)
-            
+            this.commit("setitemFilteredList",value) 
          },
-
-        
     }
 }
