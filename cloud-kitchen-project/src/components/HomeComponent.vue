@@ -1,10 +1,4 @@
-
 <template>
-
-
-     
-    
-
    <div>
      <UserHeaderComponent/>
       <router-view />

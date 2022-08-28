@@ -23,5 +23,8 @@ export default {
     
        console.log(this.filteredList)
 
+    },
+    methods:{
+        
     }
 }

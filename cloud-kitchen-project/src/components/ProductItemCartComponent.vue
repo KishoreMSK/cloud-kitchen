@@ -11,17 +11,14 @@
                      <div class="text-content">
                         <h3>{{item.itemname}}</h3> <p class="price">&#8377;{{item.price}}</p>
                         <p class="description">{{item.description}}</p>
-                        </div>
+                        </div> 
                     <div class="image-content">
        <v-img
-   
      class="imgItem"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
     <div class="addToCart"> <v-btn color="primary" class="button" dense  small >Add to cart</v-btn></div>
-    
                     </div>
-                
                 </v-sheet>
             </div>
         </v-col>
@@ -29,11 +26,7 @@
         </v-col>
     </v-row>
    </v-container>
-    
    </div>
-   
-     
-   
 </template>
 <script src="../js/ProductItemCartComponent.js">
 

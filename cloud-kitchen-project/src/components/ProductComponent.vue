@@ -7,7 +7,6 @@
           <ProductCartComponent v-for="item in itemlist" :key="item.id" :itemObject="item"/>
        </v-row>
    
-   
     </v-container>
 </template>
 
