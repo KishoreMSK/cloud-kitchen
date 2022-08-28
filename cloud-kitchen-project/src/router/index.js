@@ -33,7 +33,6 @@ children:[
  {
   path:"/",
   component: ProductComponent
-
  },
 
  {
@@ -46,7 +45,6 @@ children:[
   component:InventoryComponent
 
  },
-
 ]},
 {
   path:"/register",
