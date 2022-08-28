@@ -28,37 +28,40 @@
     >
     </v-text-field>
     </v-col>
-    <v-col>
-      <v-select
-    :items="['admin', 'customer']"
-       v-model="user.userType"
-    label="userType"
-  ></v-select>
-      </v-col>
-    </v-row><br>
-    <div class="loginBtn">
+    </v-row>
      <v-row cols="12">
+    <v-col>
+    <v-select
+    :items="['admin', 'customer']"
+       v-model="user.userType" filled rounded solo dense
+    label="UserType"
+  ></v-select>
+    </v-col>
+    </v-row>
+<v-row cols="12">
+    <div class="loginBtn">
         <v-col lg="6" md="12" sm="12">
-        <v-btn @click="userLogin()"
-         color="primary"
-   block
-  elevation="2"
-  raised
-  rounded
-> Login</v-btn>
-</v-col>
- <v-col lg="6" md="12" sm="12">
         <v-btn @click="userReset()"
          color="primary"
    block
   elevation="2"
   raised
   rounded
->Reset</v-btn>
+> Reset</v-btn>
 </v-col>
-     </v-row>
-     
 </div>
+<div>
+ <v-col lg="6" md="12" sm="12">
+        <v-btn @click="userLogin()"
+         color="primary"
+   block
+  elevation="2"
+  raised
+  rounded
+>Login</v-btn>
+</v-col>
+</div>
+</v-row>
       
     </v-container>
   </v-card>
@@ -71,12 +74,12 @@
     margin-left: 80px;
   }
   .card{
-    height: 250px;
+    height: 335px;
     margin-top: 25%;
   }
   .loginchange{
     background-color: rgb(149, 144, 144);
-    height: 100vh;
+    height: 200vh;
   }
   .mx-auto{
     border-radius: 20px;

@@ -35,6 +35,7 @@ export default{
         userReset(){
             this.user.uname="";
             this.user.upassword="";
+            this.user.userType = "";
         },
        
         
