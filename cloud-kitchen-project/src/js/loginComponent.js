@@ -28,7 +28,7 @@ export default{
                   
                   console.log(response)
                   if(response.data==true){
-                    this.$router.push({path:"/user"})
+                    // this.$router.push({path:"/user"})
                   }
                   else{
                     alert('invalid credentials')   

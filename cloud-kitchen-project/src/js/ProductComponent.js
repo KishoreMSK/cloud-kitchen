@@ -15,6 +15,7 @@ export default {
     computed:{
         ...mapGetters({
             itemlist:'getitemlist',
+            filteredList:'getitemfilteredlist',
             uniqueItem : 'getUniqueItemList'
         })
     },

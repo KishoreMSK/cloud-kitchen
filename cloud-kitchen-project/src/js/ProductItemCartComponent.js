@@ -27,13 +27,15 @@ export default {
     methods:{
         addCart(item)
         {
+          item.quantity=1;
           console.log(item)
-          const users = JSON.parse("[]" || "[]");
-         users.push(item);
+          
+          const users = JSON.parse(localStorage.getItem("users") || "[]");
+          users.push(item);
            
           localStorage.setItem("users", JSON.stringify(users));
          
-          this.$store.dispatch("SET_CART_LIST",item)
+          // this.$store.dispatch("SET_CART_LIST",item)
         }
       }
     }

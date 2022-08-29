@@ -3,13 +3,13 @@
    <div>
    
    <v-container>
-    <h5> {{filtereditemList.length}}ITEMS</h5>
+    <h5> {{filtereditemList.length}} ITEMS</h5>
     <v-row>
         <v-col cols="12" lg="8" sm="12" md="12">
             <div v-for="item in  filtereditemList" :key="item.id">
                 <v-sheet class="mt-6 pa-5 card-item" elevation="2">
                      <div class="text-content">
-                        <h3>{{item.itemname}}</h3> <p class="price">&#8377;{{item.price}}</p>
+                        <h3>{{item.foodName}}</h3> <p class="price">&#8377;{{item.price}}</p>
                         <p class="description">{{item.description}}</p>
                         </div> 
                     <div class="image-content">

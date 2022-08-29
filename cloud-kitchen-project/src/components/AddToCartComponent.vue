@@ -7,13 +7,16 @@
             <tr>
               <td>  Name</td>
                <td>  Price</td>
+                <td>  Quantity</td>
             </tr>
             <tr v-for="(item,index) in cartlist" :key="item.id">
-                <td> {{item.itemname}}</td>
+                <td> {{item.foodName}}</td>
                   <td> {{item.price}}</td>
+                   <td><v-btn @click="quantity(index,'increase')">+</v-btn> {{item.quantity}} <v-btn @click="quantity(index,'reduce')">-</v-btn> </td>
                   <td ><v-btn @click="removeItem(index)">Delete</v-btn></td>
             </tr>
        </table>
+       <v-btn @click="placeOrder">Place Order</v-btn>
     </v-container>
 </div>
 </template>
