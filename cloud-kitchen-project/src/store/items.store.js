@@ -94,7 +94,7 @@ export default {
     mutations : {
         setitemFilteredList(state,value){
             const filteredArray = state.itemlist.filter((item) => {
-                return item.itemtype==value;
+                return item.itemType==value;
               });
               console.log(filteredArray)
             state.itemFilteredList = filteredArray

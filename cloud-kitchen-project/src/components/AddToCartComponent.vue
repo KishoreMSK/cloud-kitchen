@@ -9,7 +9,7 @@
                <td>  Price</td>
             </tr>
             <tr v-for="(item,index) in cartlist" :key="item.id">
-                <td> {{item.itemname}}</td>
+                <td> {{item.foodName}}</td>
                   <td> {{item.price}}</td>
                   <td ><v-btn @click="removeItem(index)">Delete</v-btn></td>
             </tr>
