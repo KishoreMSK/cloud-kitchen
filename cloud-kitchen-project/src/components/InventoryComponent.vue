@@ -1,6 +1,6 @@
 <template>
 <div> 
-<v-container class="order">
+<v-container class="order" >
    <v-btn absolute right  style="margin-right:10%;margin-top:3%;margin-bottom:2%" @click="dialog=true" color="primary">
     Add product
    </v-btn>
@@ -141,8 +141,7 @@
         v-model="product.description"
         ></v-textarea>
     </v-col>
-          </v-row>
-
+  </v-row>
         </v-card-text> 
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -181,6 +180,7 @@
     margin-top: 20px;
     box-shadow: 1px 3px 9px 10px rgba(209, 201, 209, 0.82); 
     border-radius: 50px; 
+    height: max-content;
     }
     .inventory-top{
       margin-top:5%;

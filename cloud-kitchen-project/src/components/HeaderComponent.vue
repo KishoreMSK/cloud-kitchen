@@ -46,7 +46,7 @@
      
     </v-app-bar>
       <v-sheet
-    height="770"
+    min-height="90vh"
     class="overflow-hidden"
     style="position: relative;"
   >
