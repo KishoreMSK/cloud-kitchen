@@ -95,8 +95,10 @@ url text,
 
 primary key(foodid));
 
+```
 
-FUNCTIONS:
+### FUNCTIONS:
+```
 register a new user
 login with the emailid and password
 if admin add,delete items to the inventory
