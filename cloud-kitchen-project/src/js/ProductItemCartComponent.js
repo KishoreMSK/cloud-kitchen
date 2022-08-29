@@ -27,7 +27,9 @@ export default {
     methods:{
         addCart(item)
         {
+          item.quantity=1;
           console.log(item)
+          
           const users = JSON.parse(localStorage.getItem("users") || "[]");
           users.push(item);
            

@@ -28,6 +28,7 @@
           console.log(payload)
           registerUser({
             success : (response) => {
+              
               this.$router.push({path : `/login`})
               console.log(response)
                 alert('success')
