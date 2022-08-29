@@ -6,7 +6,7 @@ export default {
         return {
           cartlist:[],
           total:0,
-          orderStatus:false
+          orderStatus:null,
         }
     },
    
@@ -19,6 +19,9 @@ export default {
          if(status)
          {
             this.orderStatus=true
+         }
+         else{
+            this.orderStatus=false
          }
     },
     computed:{
@@ -55,9 +58,10 @@ export default {
                   console.log(response)
                   if(response.data=='sent')
                   {
-                    alert("success")
+                    alert("Order cancelled successfully")
                     this.orderStatus=false
-                    sessionStorage.setItem("status", "ordered");
+                    sessionStorage.removeItem("status");
+                    
                   }
                    
                 },
@@ -105,10 +109,11 @@ export default {
                 success : (response) => {
                   
                   console.log(response)
-                  if(response.data=='success')
+                  if(response.data=='Order Placed Successfully')
                   {
                     alert("success")
                     sessionStorage.setItem("status", "ordered");
+                    this.orderStatus=true
                   }
                    
                 },

@@ -9,9 +9,9 @@
 
       <v-toolbar-title>Cloud-Kitchen</v-toolbar-title>
 
-      <v-btn class="ml-md-14" color="deep-purple accent-4">Products</v-btn>
-      <v-btn class="ml-md-14" color="deep-purple accent-4">Cart</v-btn>
-
+     <h4 class="links"><router-link to="/user">Product</router-link></h4>
+      <h4 class="links"><router-link to="/cart">Cart</router-link></h4>
+      
 <v-spacer></v-spacer> 
       <v-btn icon>
         <v-icon>mdi-heart</v-icon>
@@ -50,3 +50,10 @@
 </template>
 <script src="../js/UserHeader.js">
 </script>
+<style scoped>
+.links{
+margin-left:20px;
+text-decoration: none;
+color: white;
+}
+</style>
