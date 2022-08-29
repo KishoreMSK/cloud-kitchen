@@ -28,9 +28,10 @@
           console.log(payload)
           registerUser({
             success : (response) => {
-              
-              this.$router.push({path : `/login`})
-              console.log(response)
+              localStorage.setItem("admin", JSON.stringify(response.data));
+             
+               this.$router.push({path : `/login`})
+              console.log(response.data)
                 alert('success')
             },
             error : (e) => {

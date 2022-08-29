@@ -1,7 +1,7 @@
 <template>
 <div>
    <v-container>
-       total items {{cartlist.length}}
+       total items {{cartlist.length}} {{orderStatus}}
        <v-btn @click="emptyCart">Remove aLL</v-btn>
        <table>
             <tr>
@@ -16,7 +16,8 @@
                   <td ><v-btn @click="removeItem(index)">Delete</v-btn></td>
             </tr>
        </table>
-       <v-btn @click="placeOrder">Place Order</v-btn>
+       <v-btn v-if="!orderStatus" @click="placeOrder">Place Order</v-btn>
+       <v-btn v-if="orderStatus" @click="cancelOrder">Cancel Order</v-btn>
     </v-container>
 </div>
 </template>

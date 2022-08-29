@@ -35,3 +35,30 @@ export const getProduct = ({success, error})=>{
         error && error(e)
     })
   }
+  export const orderProduct = ({success, error,object})=>{
+    console.log("inside get rhisteer")
+    const api =`http://10.30.1.46:8085/order/insertOrders`
+    console.log(api)
+    axios
+    .post(api,object)
+    .then((response)=>{     
+      success && success(response)      
+    }).catch((e) => {
+        error && error(e)
+    })
+
+  }
+  export const cancelProduct = ({success, error,object})=>{
+    console.log("inside get rhisteer")
+    const api =`http://10.30.1.46:8085/order/cancelOrders`
+    console.log(api)
+    axios
+    .post(api,object)
+    .then((response)=>{  
+      console.log(response)   
+      success && success(response)      
+    }).catch((e) => {
+      console.log(e)   
+        error && error(e)
+    })
+  }

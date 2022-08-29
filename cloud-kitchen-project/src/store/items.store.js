@@ -93,6 +93,7 @@ export default {
     },
     mutations : {
         setitemFilteredList(state,value){
+            
             const filteredArray = state.itemlist.filter((item) => {
                 return item.itemType==value;
               });

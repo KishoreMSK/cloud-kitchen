@@ -12,6 +12,7 @@ export default {
        
         ...mapGetters({
             itemlist:'getitemlist',
+            
             filtereditemList:'getitemfilteredlist'
         })
     },
@@ -29,7 +30,7 @@ export default {
         {
           item.quantity=1;
           console.log(item)
-          
+          alert("Product Added to cart")
           const users = JSON.parse(localStorage.getItem("users") || "[]");
           users.push(item);
            
