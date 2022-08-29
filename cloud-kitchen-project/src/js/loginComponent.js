@@ -24,11 +24,21 @@ export default{
             }
             console.log(payload)
             loginUser({
+                
                 success : (response) => {
-                  
+                  localStorage.setItem("users",[])
                   console.log(response)
                   if(response.data==true){
-                    // this.$router.push({path:"/user"})
+                    alert("success")
+                    if(this.user.userType=="admin")
+                    {
+                      this.$router.push({path:"/admin/inventory"})
+                      
+                    }
+                    else{
+                      this.$router.push({path:"/user/"})
+                    }
+                     
                   }
                   else{
                     alert('invalid credentials')   

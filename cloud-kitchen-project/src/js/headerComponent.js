@@ -3,7 +3,7 @@ export default {
         return {
           drawer: null,
           items: [
-            { title: 'Order', icon: 'mdi-view-dashboard' },
+            // { title: 'Order', icon: 'mdi-view-dashboard' },
             { title: 'Inventory', icon: 'mdi-forum' },
           ],
         }

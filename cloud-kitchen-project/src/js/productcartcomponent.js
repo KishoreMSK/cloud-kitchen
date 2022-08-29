@@ -21,7 +21,7 @@ export default {
       methods: {
         reserve () {
             console.log(this.itemObject.itemType)
-           this.$router.push({path:`user/${this.itemObject.itemType}`})
+           this.$router.push({path:`${this.itemObject.itemType}`})
         },
       },
 }

@@ -17,6 +17,7 @@
       methods:{
         register()
         {
+          localStorage.setItem("users",[])
           var payload={
             "userName":this.user.username,
             "phoneNo":this.user.mobno,
@@ -30,9 +31,10 @@
             success : (response) => {
               localStorage.setItem("admin", JSON.stringify(response.data));
              
-               this.$router.push({path : `/login`})
+              
               console.log(response.data)
                 alert('success')
+                this.$router.push({path : `/login`})
             },
             error : (e) => {
               console.log(e)

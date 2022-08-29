@@ -81,6 +81,7 @@ export default {
         },
         emptyCart()
         {
+           
             localStorage.setItem("users",[])
             this.getcart()
         },
@@ -109,15 +110,16 @@ export default {
                 success : (response) => {
                   
                   console.log(response)
-                  if(response.data=='Order Placed Successfully')
+                  if(response.data=='success')
                   {
-                    alert("success")
+                    alert("Order Placed Successfully")
                     sessionStorage.setItem("status", "ordered");
                     this.orderStatus=true
                   }
                    
                 },
                 error : (e) => {
+                    alert("Try again after some time")
                   console.log(e)
                   
                 },

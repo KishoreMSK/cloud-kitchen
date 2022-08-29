@@ -9,7 +9,7 @@
     <v-img
     class="ml-4 mr-4 mt-4 pt-4"
       height="180"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+       :src="itemObject.url"
     ></v-img>
 
     <v-card-title>{{itemObject.itemType}}</v-card-title>
@@ -33,7 +33,7 @@
       </div>
       <h3>.</h3>
       <div>
-        {{itemObject.duration}}
+        {{itemObject.duration}} mins
       </div>
       <h3>.</h3>
       <div>

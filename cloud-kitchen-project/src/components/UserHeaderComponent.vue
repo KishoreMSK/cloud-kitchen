@@ -8,10 +8,12 @@
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
       <v-toolbar-title>Cloud-Kitchen</v-toolbar-title>
-
-     <h4 class="links"><router-link to="/user">Product</router-link></h4>
-      <h4 class="links"><router-link to="/cart">Cart</router-link></h4>
+     <div class="d-flex-buton">
+       <v-btn  @click="movePage('/user/')" class="deep-purple accent-4 btn-class">Product</v-btn>
+    <v-btn   @click="movePage('/cart')" class="deep-purple accent-4  btn-class">Cart</v-btn>
+     
       
+     </div>
 <v-spacer></v-spacer> 
       <v-btn icon>
         <v-icon>mdi-heart</v-icon>
@@ -56,4 +58,9 @@ margin-left:20px;
 text-decoration: none;
 color: white;
 }
+.d-flex-buton{
+ 
+  margin-left: 8%;
+}
+
 </style>
