@@ -6,17 +6,36 @@
           value => !!value || 'Required.',
           value => (value && value.length >= 5) || 'Min 5 characters',
         ],
+        error:"",
         user:{
           username:"",
           mobno:"",
           address:"",
           email:"",
           password:"",
+          cpassword:""
         }
       }),
       methods:{
         register()
         {
+          console.log("resgister")
+          if(this.user.username==''||this.user.mobno==''||this.user.address=='',this.user.email==''||this.user.password==' ')
+          {
+            this.error="Please enter the fields"
+            console.log("empty")
+            
+          }
+           else if(this.user.password!=this.user.cpassword)
+          {
+            console.log("not empty")
+            this.error="Password does not match"
+          }
+          else
+          {
+            console.log("empty")
+            this.error=" "
+            console.log("resgister succes")
           localStorage.setItem("users",[])
           var payload={
             "userName":this.user.username,
@@ -42,7 +61,8 @@
             },
             object:payload
         })
-        
+        this.error=""
+      }
         },
         goLogin(){
             this.$router.push({path : `/login`})

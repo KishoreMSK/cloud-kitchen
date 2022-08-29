@@ -37,8 +37,11 @@
   ></v-select>
     </v-col>
     </v-row>
+      <div class="account"><router-link  to="/register">Don't have account ?</router-link></div>
+     <br>
 <div class="">
      <v-row cols="12">
+   
         <v-col lg="6" md="12" sm="12">
         <v-btn @click="userReset()"
          color="primary"
@@ -72,15 +75,18 @@
     margin-left: 80px;
   }
   .card{
-    height: 335px;
+    height: max-content;
     margin-top: 25%;
   }
   .loginchange{
-    background-color: rgb(149, 144, 144);
+    /* background-color: rgb(149, 144, 144); */
     height: 200vh;
   }
   .mx-auto{
     border-radius: 20px;
+  }
+  .account{
+    text-align: center;
   }
 </style>
 

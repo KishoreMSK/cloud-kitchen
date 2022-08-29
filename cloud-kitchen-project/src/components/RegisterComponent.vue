@@ -39,15 +39,17 @@
       hide-details="auto"
     >
     </v-text-field>
+  
         </v-col>
     <v-col lg="6" md="12" sm="12">
     <v-text-field rounded solo dense filled
       label="Confirm Password"
       :rules="rules"
-        v-model="user.confirmpassword"
+        v-model="user.cpassword"
       hide-details="auto"
     >
     </v-text-field>
+
         </v-col>
     </v-row>
     <v-row>
@@ -71,6 +73,7 @@
         ></v-textarea>
         </v-col>
     </v-row>
+      <span class="errortext">{{this.error}}</span>
   </v-container>
 
 <div class="reg-button">
@@ -106,7 +109,10 @@
 <style scoped>
 .register-card{
  margin-top:15%;
+
 }
+.errortext{color: red;
+text-align: center;}
  .mx-auto{
     margin-left: 300px;
     border-radius: 30px;
