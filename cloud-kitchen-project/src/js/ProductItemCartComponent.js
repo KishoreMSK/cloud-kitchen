@@ -27,8 +27,9 @@ export default {
     methods:{
         addCart(item)
         {
-          const users = JSON.parse(localStorage.getItem("users") || "[]");
-          users.push(item);
+          console.log(item)
+          const users = JSON.parse("[]" || "[]");
+         users.push(item);
            
           localStorage.setItem("users", JSON.stringify(users));
          

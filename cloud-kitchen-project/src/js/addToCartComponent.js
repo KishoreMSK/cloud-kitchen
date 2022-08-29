@@ -12,8 +12,6 @@ export default {
     mounted()
     {
          this.getcart()
-         
-
     },
     computed:{
         ...mapGetters({

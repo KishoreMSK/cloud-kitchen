@@ -12,13 +12,13 @@
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
 
-    <v-card-title>{{itemObject.itemtype}}</v-card-title>
+    <v-card-title>{{itemObject.itemType}}</v-card-title>
 
     <v-card-text>
      
 
       <div class="text-subtitle-1">
-       {{itemObject.itemType}}
+       {{itemObject.cuisine}}
       </div>
       
        <v-card

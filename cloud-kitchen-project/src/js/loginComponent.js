@@ -3,6 +3,10 @@ import { loginUser } from "@/service/login.service"
 export default{
     data(){
        return{
+        rules: [
+          value => !!value || 'Required.',
+          // value => (value && value.length >= 5) || 'Min 5 characters',
+        ],
          user:{
             uname:"",
             upassword:"",
@@ -21,13 +25,13 @@ export default{
             console.log(payload)
             loginUser({
                 success : (response) => {
-                  const val = true
+                  
                   console.log(response)
-                  if(val){
-                    this.$route.push({path:"/user"})
+                  if(response.data==true){
+                    this.$router.push({path:"/user"})
                   }
                   else{
-                    alert('error')   
+                    alert('invalid credentials')   
                   }
                 },
                 error : (e) => {

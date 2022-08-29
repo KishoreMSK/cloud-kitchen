@@ -1,3 +1,4 @@
+import { getProduct } from "@/service/product.service";
 export default {
     state : {
         itemFilteredList:[],
@@ -106,16 +107,16 @@ export default {
     },
     actions : {
         GETITEM_LIST(){
-            // getProduct({
-            //     success : (response) => {
-            //         this.commit("setitemProduct",response)
-            //         console.log("inside store get")
-            //     },
-            //     error : (e) => {
-            //        alert("error")
-            //        state.itemlist=[]
-            //     },
-            // })
+            getProduct({
+                success : (response) => {
+                    this.commit("setitemProduct",response.data)
+                    console.log("inside store get")
+                },
+                error : (e) => {
+                   alert("error",e)
+                   this.commit("setitemProduct",[])
+                },
+            })
            console.log("WORKIng")
         },
         SET_FILTERED_LIST(state,value){

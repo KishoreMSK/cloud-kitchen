@@ -23,6 +23,9 @@
 <!-- <template v-slot:[`item.Availablity`]="{ item }">
   <v-btn v-if
 </template> -->
+<template v-slot:[`item.url`]="{ item }">
+  <img width="100" height="100" :src="item.url" alt="hjh" srcset="">
+</template>
 <template v-slot:[`item.Actions`]="{ item }">
          <v-icon
         small

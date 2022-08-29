@@ -30,7 +30,7 @@ export default {
                 value => (value && value.length >= 3) || 'Min 3 characters',
               ],
         headers: [
-         
+          { text: 'url', value: 'url' },
           { text: 'Product Name', value: 'foodName' },
           { text: 'Item type', value: 'itemType' },
           { text: 'Category', value: 'category' },
@@ -41,8 +41,8 @@ export default {
           { text: 'duration', value: 'duration' },
           { text: 'offer', value: 'offer' },
           { text: 'coupon', value: 'coupon' },
-          { text: 'url', value: 'url' },
-          { text: 'Availablity', value: 'Availablity' },
+        
+          { text: 'Availablity', value: 'stockCount' },
           { text: 'Actions', value: 'Actions' },
         ],
      products:[],
