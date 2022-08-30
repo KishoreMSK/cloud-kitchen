@@ -12,6 +12,13 @@ export default {
           changePage(title){
             console.log(title);
             this.$router.push({path : `/admin/${title}`})
+          },
+          logout()
+          {
+            sessionStorage.removeItem("status");
+            localStorage.setItem("users",[])
+            this.$router.push({name:"login"})
+    
           }
       },
       Component:{

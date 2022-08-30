@@ -3,10 +3,10 @@
     <v-card class="card2"  >
    <v-container>
 
-       <h2>Total Items:    {{cartlist.length}}</h2>  {{orderStatus}}
+       <h2>Total Items:    {{cartlist.length}}</h2> 
        <v-btn v-if="!orderStatus" absolute top right color="error" @click="emptyCart">Remove All</v-btn>
 
-       <table class="cart-table">
+       <table class="cart-table" style="margin-top:5%">
             <tr class="data data-row">
               <td class="data">  Name</td>
                <td class="data">  Price</td>

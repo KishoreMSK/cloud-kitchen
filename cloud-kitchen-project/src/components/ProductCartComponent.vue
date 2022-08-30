@@ -1,5 +1,5 @@
 <template>
-  <v-col class="main-card" lg="3" @mouseenter="show=true" @mouseleave="show=false">
+  <v-col v-if="itemObject.stockCount>0" class="main-card" lg="3" @mouseenter="show=true" @mouseleave="show=false">
     <v-card
   
     class=" mt-12 pt-2" 
@@ -29,7 +29,7 @@
     >
      <!-- :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'" -->
       <div class="stars">
-                <v-icon class="icon-star" color="white">mdi-star</v-icon>{{itemObject.stars}}
+                <v-icon class="icon-star" color="white">mdi-star</v-icon>{{itemObject.rating}}
       </div>
       <h3>.</h3>
       <div>
@@ -64,7 +64,7 @@
       </v-chip-group>
     </v-card-text> -->
  <v-divider class=""></v-divider>
- <v-card-text><div class="offer"> <v-icon class="offer-icon">mdi-brightness-percent</v-icon>{{itemObject.offer}} off  | {{itemObject.coupon}}</div></v-card-text>
+ <v-card-text><div class="offer"> <v-icon class="offer-icon">mdi-brightness-percent</v-icon>{{itemObject.offer}} off</div></v-card-text>
     
     <div v-if="show">
        <v-divider class=""></v-divider> 

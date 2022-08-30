@@ -29,7 +29,7 @@ export default{
                   localStorage.setItem("users",[])
                   console.log(response)
                   if(response.data==true){
-                    alert("success")
+                    //alert("success")
                     if(this.user.userType=="admin")
                     {
                       this.$router.push({path:"/admin/inventory"})

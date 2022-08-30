@@ -6,6 +6,14 @@
           value => !!value || 'Required.',
           value => (value && value.length >= 5) || 'Min 5 characters',
         ],
+        rulesno: [
+          value => !!value || 'Required.',
+          value => (value && value.length == 10) || 'Invalid number',
+        ],
+        emailrules: [
+          (v) => !!v || "Email is required",
+          (v) => /.+@.+\..+/.test(v) || "Email must be valid",
+       ],
         error:"",
         user:{
           username:"",
@@ -52,7 +60,7 @@
              
               
               console.log(response.data)
-                alert('success')
+                alert('Registration successful')
                 this.$router.push({path : `/login`})
             },
             error : (e) => {

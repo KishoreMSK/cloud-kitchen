@@ -7,6 +7,7 @@ export default {
           cartlist:[],
           total:0,
           orderStatus:null,
+
         }
     },
    
@@ -23,6 +24,7 @@ export default {
          else{
             this.orderStatus=false
          }
+         this.getTotal();
     },
     computed:{
         ...mapGetters({
@@ -31,6 +33,14 @@ export default {
 
     },
     methods:{
+        getTotal()
+        {
+            var users = JSON.parse(localStorage.getItem("users") || "[]");
+            this.total=0
+            users.forEach(element => {
+                  this.total=this.total+element.price*element.quantity
+            })
+        },
         cancelOrder()
         {
             var users = JSON.parse(localStorage.getItem("users") || "[]");
@@ -128,6 +138,7 @@ export default {
         },
         quantity(item,operation)
         {
+            this.getTotal()
             const users = JSON.parse(localStorage.getItem("users") || "[]");
 console.log(users)
 
@@ -137,13 +148,23 @@ console.log(users[item])
             if(operation=="reduce")
             {
                console.log("res")
+               if(users[item].quantity>1)
+               {
                 users[item].quantity=users[item].quantity-1
+               }
+                
             }
             else if(operation=='increase')
             {
                 
-            console.log("increaes")
+            console.log("increaes",users[item].stockCount)
+            if(users[item].quantity+1<=users[item].stockCount)
+            {
                 users[item].quantity=users[item].quantity+1
+            }
+          else{
+            alert("stock unavailable")
+          }
             
             }
            

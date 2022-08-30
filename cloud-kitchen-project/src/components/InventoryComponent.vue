@@ -27,12 +27,12 @@
   <img width="100" height="100" :src="item.url" alt="hjh" srcset="">
 </template>
 <template v-slot:[`item.Actions`]="{ item }">
-         <v-icon
+         <!-- <v-icon
         small
         @click="dialog2=true"
       >
         mdi-pencil
-      </v-icon>
+      </v-icon> -->
       <v-icon
         small
         @click="deleteItem(item)"

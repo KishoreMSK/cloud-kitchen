@@ -23,6 +23,7 @@
     <v-text-field v-model="user.upassword" filled rounded solo dense
       label="Password"
       :rules="rules"
+      type="password"
       hide-details="auto"
     >
     </v-text-field>
@@ -80,7 +81,10 @@
   }
   .loginchange{
     /* background-color: rgb(149, 144, 144); */
-    height: 200vh;
+    height: 100%;
+    /* width: 100%; */
+    /* background-image: url("https://img.wallpapersafari.com/desktop/1024/576/91/87/NLIx25.jpg"); */
+    /* background-size: auto; */
   }
   .mx-auto{
     border-radius: 20px;

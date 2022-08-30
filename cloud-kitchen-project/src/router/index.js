@@ -45,6 +45,7 @@ children:[
  },
  {
   path:"/login",
+  name:"login",
   component:LoginComponent
  },
  {

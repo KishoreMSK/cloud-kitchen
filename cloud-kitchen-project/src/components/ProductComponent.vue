@@ -4,7 +4,7 @@
     <hr> -->
     
        <v-row class="cart-items-container" cols="12">
-          <ProductCartComponent v-for="item in itemlist" :key="item.id" :itemObject="item"/>
+          <ProductCartComponent v-for="item in uniqueItem" :key="item.id" :itemObject="item"/>
        </v-row>
    
     </v-container>

@@ -22,7 +22,7 @@
     <v-col lg="6" md="12" sm="12">
     <v-text-field rounded filled solo dense
       label="Contact no"
-      :rules="rules"
+      :rules="rulesno"
        v-model="user.mobno"
       hide-details="auto"
     >
@@ -35,6 +35,7 @@
     <v-text-field rounded filled solo dense
       label="Password"
        v-model="user.password"
+       type="password"
       :rules="rules"
       hide-details="auto"
     >
@@ -45,6 +46,7 @@
     <v-text-field rounded solo dense filled
       label="Confirm Password"
       :rules="rules"
+       type="password"
         v-model="user.cpassword"
       hide-details="auto"
     >
@@ -56,7 +58,8 @@
         <v-col lg="12">
             <v-text-field rounded solo dense filled
       label="Email id"
-      :rules="rules"
+      :rules="emailrules"
+      type="email"
        v-model="user.email"
       hide-details="auto"
     >

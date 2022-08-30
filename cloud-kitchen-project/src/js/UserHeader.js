@@ -9,6 +9,13 @@ export default {
       {
         console.log("movepage")
         this.$router.push(value)
+      },
+      logout()
+      {
+        sessionStorage.removeItem("status");
+        localStorage.setItem("users",[])
+        this.$router.push({name:"login"})
+
       }
     }
 }
